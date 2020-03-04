@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+<!--    <properties resource="jdbc.properties"/>-->
+
+    <dataSource>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql:///mybatis_quanle_test"/>
+        <property name="username" value="root"/>
+        <property name="password" value="mysql8.0"/>
+    </dataSource>
+
+    <!--引入映射配置文件-->
+    <mapper resource="IUserMapper.xml"/>
+</configuration>

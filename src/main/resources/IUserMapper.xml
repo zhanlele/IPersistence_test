@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mapper namespace="com.quanle.mapper.IUserMapper">
+    <select id="findAllUser" resultType="com.quanle.pojo.User">
+        select * from user
+    </select>
+
+    <select id="findUserById" resultType="com.quanle.pojo.User" parameterType="com.quanle.pojo.Userr">
+        select * from user where id = #{id}
+    </select>
+
+    <delete id="deleteUserById" parameterType="com.quanle.pojo.User">
+        delete from user where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="com.quanle.pojo.User">
+        update user set  username = #{username} where id=#{id}
+    </update>
+
+    <insert id="addUser" parameterType="com.quanle.pojo.User">
+        insert into user (id,username) values (#{id},#{username})
+    </insert>
+</mapper>
